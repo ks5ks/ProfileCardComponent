@@ -1,0 +1,132 @@
+:root {
+  --text-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --background-dark-cyan: hsl(185, 75%, 39%);
+  --background-dark-grayish-blue: hsl(227, 10%, 46%);
+
+  /* Text Colors */
+  --text-white: hsl(0, 0%, 100%);
+  --text-white-paragraph: hsla(0, 0%, 100%, 0.75);
+  --text-white-heading: hsla(0, 0%, 100%, 0.6);
+  --text-dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-dark-cyan);
+}
+
+.circle-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.circle-right {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(50%, 30%);
+  width: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.card {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 1.125rem;
+  max-width: 350px;
+  margin: 7rem auto 1rem;
+  color: var(--text-very-dark-desaturated-blue);
+  background-color: white;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  .circle-left {
+    transform: translate(-40%, -70%);
+    width: 100%;
+  }
+
+  .circle-right {
+    transform: translate(35%, 70%);
+    width: 100%;
+  }
+}
+
+.top {
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.pattern {
+  width: 100%;
+  position: relative;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.profile-image {
+  width: 30%;
+  border-radius: 50rem;
+  border: solid 0.5rem var(--text-white);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+}
+
+.name,
+.city {
+  text-align: center;
+}
+
+.age {
+  padding-left: 1rem;
+  font-weight: 400;
+  color: var(--text-dark-gray);
+}
+
+.city {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: var(--text-dark-gray);
+}
+
+hr {
+  background-color: var(--text-dark-gray);
+  height: 1px;
+  border: 0;
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.statistic > span {
+  color: var(--text-dark-gray);
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
