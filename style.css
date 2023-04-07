@@ -21,6 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--background-dark-cyan);
+  overflow: hidden;
 }
 
 .circle-left {
@@ -37,7 +38,7 @@ body {
   position: absolute;
   right: 0;
   bottom: 0;
-  transform: translate(50%, 30%);
+  transform: translate(50%, 50%);
   width: 100%;
   overflow: hidden;
   z-index: -1;
@@ -47,22 +48,10 @@ body {
   font-family: "Kumbh Sans", sans-serif;
   font-size: 1.125rem;
   max-width: 350px;
-  margin: 7rem auto 1rem;
+  margin: auto;
   color: var(--text-very-dark-desaturated-blue);
   background-color: white;
   border-radius: 1rem;
-}
-
-@media screen and (min-width: 500px) {
-  .circle-left {
-    transform: translate(-40%, -70%);
-    width: 100%;
-  }
-
-  .circle-right {
-    transform: translate(35%, 70%);
-    width: 100%;
-  }
 }
 
 .top {
